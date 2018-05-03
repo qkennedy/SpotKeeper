@@ -35,6 +35,11 @@
 		78DF64BB20977778005B38A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DF64BA20977778005B38A9 /* QuartzCore.framework */; };
 		78DF64BD20977781005B38A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DF64BC20977781005B38A9 /* SystemConfiguration.framework */; };
 		78DF64BF20977788005B38A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DF64BE20977788005B38A9 /* UIKit.framework */; };
+		78E3BF02209B93AF0045B4DA /* MarkerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3BF01209B93AF0045B4DA /* MarkerTableViewController.swift */; };
+		78E3BF04209B965A0045B4DA /* MarkerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3BF03209B965A0045B4DA /* MarkerTableViewCell.swift */; };
+		78E3BF06209BB7620045B4DA /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3BF05209BB7620045B4DA /* CategoryTableViewCell.swift */; };
+		78E3BF0A209BB86E0045B4DA /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3BF09209BB86E0045B4DA /* CategoryTableViewController.swift */; };
+		78E3BF0C209BBADF0045B4DA /* EditCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3BF0B209BBADF0045B4DA /* EditCategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +94,11 @@
 		78DF64BA20977778005B38A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		78DF64BC20977781005B38A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		78DF64BE20977788005B38A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		78E3BF01209B93AF0045B4DA /* MarkerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerTableViewController.swift; sourceTree = "<group>"; };
+		78E3BF03209B965A0045B4DA /* MarkerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerTableViewCell.swift; sourceTree = "<group>"; };
+		78E3BF05209BB7620045B4DA /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		78E3BF09209BB86E0045B4DA /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		78E3BF0B209BBADF0045B4DA /* EditCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +180,11 @@
 				78DF64752097756B005B38A9 /* Info.plist */,
 				78DF646D20977569005B38A9 /* SpotKeeper.xcdatamodeld */,
 				78DC4555209A77D900BDD468 /* EditMarkerViewController.swift */,
+				78E3BF01209B93AF0045B4DA /* MarkerTableViewController.swift */,
+				78E3BF03209B965A0045B4DA /* MarkerTableViewCell.swift */,
+				78E3BF05209BB7620045B4DA /* CategoryTableViewCell.swift */,
+				78E3BF09209BB86E0045B4DA /* CategoryTableViewController.swift */,
+				78E3BF0B209BBADF0045B4DA /* EditCategoryViewController.swift */,
 			);
 			path = SpotKeeper;
 			sourceTree = "<group>";
@@ -346,8 +361,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E3BF02209B93AF0045B4DA /* MarkerTableViewController.swift in Sources */,
 				78DC4556209A77DA00BDD468 /* EditMarkerViewController.swift in Sources */,
 				78DF646F20977569005B38A9 /* SpotKeeper.xcdatamodeld in Sources */,
+				78E3BF0A209BB86E0045B4DA /* CategoryTableViewController.swift in Sources */,
+				78E3BF04209B965A0045B4DA /* MarkerTableViewCell.swift in Sources */,
+				78E3BF06209BB7620045B4DA /* CategoryTableViewCell.swift in Sources */,
+				78E3BF0C209BBADF0045B4DA /* EditCategoryViewController.swift in Sources */,
 				78DF646920977569005B38A9 /* ViewController.swift in Sources */,
 				78DF646720977569005B38A9 /* AppDelegate.swift in Sources */,
 			);

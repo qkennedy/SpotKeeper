@@ -78,9 +78,18 @@ class ViewController: UIViewController {
         
         if(!hasBasicCategories()) {
             addBasicCategories()
+            addDemoMarkers()
         }
+
         addAllSavedMarkers(mapView: mapView)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.mapView.clear()
+        addAllSavedMarkers(mapView: mapView)
+    }
+    
+    
     
     func addBasicCategories() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -96,7 +105,7 @@ class ViewController: UIViewController {
         
         let foodCategory = NSManagedObject(entity: categoryEntity!, insertInto: context) as! Category
         foodCategory.setValue("Free Food", forKey: "title")
-        foodCategory.setValue("#ff0000", forKey: "color")
+        foodCategory.setValue("#00ff00", forKey: "color")
         
         do {
             try context.save()
@@ -189,7 +198,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func removeMarker() {
+    func removeMarkers() {
         
     }
     
