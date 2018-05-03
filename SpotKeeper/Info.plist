@@ -34,12 +34,23 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs location data in order to show the user where they are, and to allow the user to mark their location.  Won&apos;t be used for anything bad, promise</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs this location data in order to work, duh</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>I don&apos;t even know how to steal your data, cmon man, let me do my work.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
 	</array>
 </dict>
 </plist>
