@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         
         let categoryEntity = NSEntityDescription.entity(forEntityName: "Category", in: context)
         let baseCategory = NSManagedObject(entity: categoryEntity!, insertInto: context) as! Category
-        baseCategory.setValue("default", forKey: "title")
+        baseCategory.setValue("Default", forKey: "title")
         baseCategory.setValue("#0000ff", forKey: "color")
         let studyCategory = NSManagedObject(entity: categoryEntity!, insertInto: context) as! Category
         studyCategory.setValue("Study Rooms", forKey: "title")
@@ -106,6 +106,10 @@ class ViewController: UIViewController {
         let foodCategory = NSManagedObject(entity: categoryEntity!, insertInto: context) as! Category
         foodCategory.setValue("Free Food", forKey: "title")
         foodCategory.setValue("#00ff00", forKey: "color")
+        
+        let napCategory = NSManagedObject(entity: categoryEntity!, insertInto: context) as! Category
+        napCategory.setValue("Nap Spot", forKey: "title")
+        napCategory.setValue("#00f0f0", forKey: "color")
         
         do {
             try context.save()
@@ -118,15 +122,42 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let studyCategory = getCategoryByTitle(title: "Study Rooms")
+        let foodCategory = getCategoryByTitle(title: "Free Food")
+        let napCategory = getCategoryByTitle(title: "Nap Spot")
         
         let markerEntity = NSEntityDescription.entity(forEntityName: "Marker", in: context)
-        let testMarker = NSManagedObject(entity: markerEntity!, insertInto: context) as! Marker
-        testMarker.setValue("Olin 8th Floor Lab", forKey: "title")
-        testMarker.setValue("Eighth Floor, Right", forKey: "desc")
-        testMarker.setValue(41.502181, forKey: "lat")
-        testMarker.setValue(-81.607850, forKey: "long")
-        testMarker.setValue(Date(), forKey: "date_created")
-        testMarker.setValue(studyCategory, forKey: "category")
+        let olinMarker = NSManagedObject(entity: markerEntity!, insertInto: context) as! Marker
+        olinMarker.setValue("Olin 8th Floor Lab", forKey: "title")
+        olinMarker.setValue("Eighth Floor, Right", forKey: "desc")
+        olinMarker.setValue(41.502181, forKey: "lat")
+        olinMarker.setValue(-81.607850, forKey: "long")
+        olinMarker.setValue(Date(), forKey: "date_created")
+        olinMarker.setValue(studyCategory, forKey: "category")
+        
+        let rockMarker = NSManagedObject(entity: markerEntity!, insertInto: context) as! Marker
+        rockMarker.setValue("3rd Floor Lounge", forKey: "title")
+        rockMarker.setValue("Physics Lounge", forKey: "desc")
+        rockMarker.setValue(41.503697, forKey: "lat")
+        rockMarker.setValue(-81.607825, forKey: "long")
+        rockMarker.setValue(Date(), forKey: "date_created")
+        rockMarker.setValue(studyCategory, forKey: "category")
+        
+        let whiteMarker = NSManagedObject(entity: markerEntity!, insertInto: context) as! Marker
+        whiteMarker.setValue("EECS Colloq", forKey: "title")
+        whiteMarker.setValue("Free Coffee with Lec.", forKey: "desc")
+        whiteMarker.setValue(41.501887, forKey: "lat")
+        whiteMarker.setValue(-81.607562, forKey: "long")
+        whiteMarker.setValue(Date(), forKey: "date_created")
+        whiteMarker.setValue(foodCategory, forKey: "category")
+        
+        let vealeMarker = NSManagedObject(entity: markerEntity!, insertInto: context) as! Marker
+        vealeMarker.setValue("2nd Floor", forKey: "title")
+        vealeMarker.setValue("Has Couches, can be loud", forKey: "desc")
+        vealeMarker.setValue(41.501054, forKey: "lat")
+        vealeMarker.setValue(-81.605938, forKey: "long")
+        vealeMarker.setValue(Date(), forKey: "date_created")
+        vealeMarker.setValue(napCategory, forKey: "category")
+        
         do {
             try context.save()
         } catch {
@@ -201,6 +232,8 @@ class ViewController: UIViewController {
     func removeMarkers() {
         
     }
+    
+    @IBAction func unwindToFirstVC(segue:UIStoryboardSegue) { }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

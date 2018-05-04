@@ -12,8 +12,7 @@ import GoogleMaps
 import CoreData
 
 extension Notification.Name {
-    static let peru = Notification.Name("peru")
-    static let argentina = Notification.Name("argentina")
+    static let refresh = Notification.Name("refresh")
 }
 
 class CategoryTableViewController: UITableViewController {
@@ -32,7 +31,7 @@ class CategoryTableViewController: UITableViewController {
         getCategories()
     }
     
-    func refreshList(notification: NSNotification) {
+    @objc func refreshList(notification: NSNotification) {
         getCategories()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -115,6 +114,7 @@ class CategoryTableViewController: UITableViewController {
     }
     
     @IBAction func goBack(_ sender: Any) {
+        
         dismiss(animated: true, completion: nil)
     }
 }

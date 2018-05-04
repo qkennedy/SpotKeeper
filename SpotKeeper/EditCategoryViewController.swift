@@ -102,7 +102,7 @@ class EditCategoryViewController: UIViewController{
         } catch {
             print("Failed saving Category")
         }
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindSegueToFirstVC", sender: self)
     }
     @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)

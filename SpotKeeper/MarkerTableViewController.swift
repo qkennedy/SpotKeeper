@@ -16,7 +16,7 @@ class MarkerTableViewController: UITableViewController {
     var selectedMarker: Marker?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshList(notification:)), name: .refresh, object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -39,6 +39,10 @@ class MarkerTableViewController: UITableViewController {
         } catch {
             print("Got an error trying to get markers")
         }
+    }
+    
+    @objc func refreshList(notification: NSNotification) {
+        getSavedMarkers()
     }
     
     override func didReceiveMemoryWarning() {
